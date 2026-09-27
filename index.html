@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="th">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>🦠 Infectious Diseases Challenge</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="app-shell">
+<header class="topbar"><div class="brand"><span class="brand-dot">🦠</span><span>Infectious Diseases Challenge</span></div></header>
+<main class="container">
+<section id="homeScreen">
+  <div class="hero">
+    <div class="eyebrow">PATHOLOGY • INFECTIOUS DISEASES</div>
+    <h1>พยาธิวิทยาของโรคติดเชื้อ</h1>
+    <p class="lead">แบบทดสอบ 10 ข้อ • ข้อละ 30 วินาที • เลือกคำตอบแล้วเฉลยทันที</p>
+    <p class="sublead">ไม่ต้องกรอกชื่อ • ไม่ต้องสมัครสมาชิก • ทำได้ทันที</p>
+  </div>
+  <div class="section-heading"><h2>เลือกชุดแบบทดสอบ</h2><p>แต่ละชุดมี 10 ข้อ หลังเลือกคำตอบจะแสดงเฉลยและคำอธิบายทันที จากนั้นจึงกด “ข้อถัดไป”</p></div>
+  <div id="setGrid" class="set-grid"></div>
+  <section class="info-card">
+    <h3>เนื้อหาครอบคลุม</h3>
+    <div class="topic-pills"><span>Infection</span><span>Transmission</span><span>SIRS / Sepsis</span><span>Diagnosis</span><span>Viruses</span><span>Bacteria</span><span>Fungi</span><span>Protozoa</span><span>Helminths</span></div>
+  </section>
+</section>
+
+<section id="quizScreen" class="hidden">
+  <div class="quiz-top"><button id="homeBtn" class="ghost-btn">← เลือกชุด</button><div id="setLabel" class="set-label"></div><div id="questionCount" class="question-count"></div></div>
+  <div class="progress"><div id="progressFill"></div></div>
+  <div class="quiz-card">
+    <div id="timerWrap" class="timer-wrap"><span>เวลา</span><strong id="timer">30</strong><span>วินาที</span><div class="timer-track"><div id="timerBar"></div></div></div>
+    <div class="question-kicker">QUESTION</div>
+    <h2 id="questionText"></h2>
+    <div id="answers" class="answers"></div>
+    <div id="timeoutNote" class="timeout-note hidden">หมดเวลา — ระบบแสดงเฉลยให้แล้วครับ</div>
+    <div id="explanation" class="explanation hidden">
+      <div class="explain-head"><span id="resultIcon" class="result-icon"></span><div><div id="resultTitle" class="result-title"></div><div class="answer-label">เฉลยและคำอธิบาย</div></div></div>
+      <p id="explanationText"></p><div class="page-ref">อ้างอิงเนื้อหา: <span id="pageRef"></span></div>
+    </div>
+    <button id="nextBtn" class="primary-btn hidden">ข้อถัดไป</button>
+  </div>
+</section>
+
+<section id="resultScreen" class="hidden">
+  <div class="result-header"><div class="eyebrow">SET COMPLETE</div><h1 id="resultSet"></h1></div>
+  <div class="score-card"><div class="score-circle"><strong id="scoreNumber">0</strong><span>/ 10</span></div><div class="score-info"><h2>คะแนนของคุณ</h2><div class="score-track"><div id="scoreBar"></div></div><p>คะแนนนี้ใช้เพื่อสะท้อนหัวข้อที่ควรทบทวน ไม่ใช่การจัดอันดับ</p></div></div>
+  <div id="feedbackCard" class="feedback-card"><div class="feedback-icon">💡</div><div><h2 id="feedbackTitle"></h2><p id="feedbackBody"></p></div></div>
+  <div class="result-actions"><button id="retryBtn" class="primary-btn">ทำชุดนี้อีกครั้ง</button><button id="otherBtn" class="secondary-btn">เลือกชุดอื่น</button></div>
+</section>
+
+<footer>
+  <div class="author"><strong>จัดทำโดย อ.ดร.ทนพ.พงศธร วิเชียร</strong><span>สาขาวิชาพยาธิวิทยา คณะแพทยศาสตร์ มหาวิทยาลัยขอนแก่น</span></div>
+  <div class="contact"><h3>ติดต่อผู้จัดทำ</h3><p>หากมีข้อเสนอแนะเกี่ยวกับ Web App สามารถติดต่อผู้จัดทำได้ทาง E-mail</p><a href="mailto:phongsathorn@kku.ac.th?subject=%E0%B8%82%E0%B9%89%E0%B8%AD%E0%B9%80%E0%B8%AA%E0%B8%99%E0%B8%AD%E0%B9%81%E0%B8%99%E0%B8%B0%20Infectious%20Diseases%20Challenge">phongsathorn@kku.ac.th</a></div>
+  <div class="source-note">เนื้อหาคำถามจัดทำจากเอกสาร “Pathology of Infectious Diseases” ที่แนบมา โดยคง terminology และกรอบเนื้อหาตามเอกสาร</div>
+</footer>
+</main>
+</div>
+<script src="app.js"></script>
+</body></html>
